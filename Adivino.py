@@ -3,7 +3,7 @@ import random
 # Variables #
 numero_aleatorio = random.randrange(101)
 
-# Devuelve si aciertas o no el numero [0-99] <= 5 intentos
+# Devuelve si aciertas o no el numero [0-100] <= 5 intentos
 def Adivinar(num_aleatorio):
     gane = False
     intento = 1
