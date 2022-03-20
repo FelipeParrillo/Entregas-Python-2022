@@ -1,13 +1,13 @@
 import random
 
 # Variables #
-numero_aleatorio = random.randrange(100)
+numero_aleatorio = random.randrange(101)
 
 # Devuelve si aciertas o no el numero [0-99] <= 5 intentos
 def Adivinar(num_aleatorio):
     gane = False
     intento = 1
-    print("Tenés 5 intentos para adivinar un entre 0 y 99")
+    print("Tenés 5 intentos para adivinar un entre 0 y 100")
     while (intento <= 5 
             and not gane):    
         numeroIngresado = int(input('Ingresa tu número: '))
