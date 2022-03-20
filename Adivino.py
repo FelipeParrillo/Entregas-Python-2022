@@ -7,11 +7,11 @@ numero_aleatorio = random.randrange(101)
 def Adivinar(num_aleatorio):
     gane = False
     intento = 1
-    print("Tenés 5 intentos para adivinar un entre 0 y 100")
+    print("Tenés 5 intentos para adivinar un número entre 0 y 100")
     while (intento <= 5 
-            and not gane):    
-        numeroIngresado = int(input('Ingresa tu número: '))
-        if numeroIngresado == num_aleatorio:
+           and not gane):    
+        num_ingresado = int(input('Ingresa tu número: '))
+        if num_ingresado == num_aleatorio:
             return('Ganaste! y necesitaste {} intentos!!!'.format(intento))
         else:
             print('Mmmm ... No.. ese número no es... Seguí intentando.')
