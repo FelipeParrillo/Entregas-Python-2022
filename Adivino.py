@@ -19,4 +19,5 @@ def Adivinar(num_aleatorio):
     if not gane:
         return('\n Perdiste :(\n El número era: {}'.format(num_aleatorio))
 
+#Main
 print(Adivinar(numero_aleatorio))
