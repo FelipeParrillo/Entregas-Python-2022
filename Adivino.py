@@ -10,11 +10,11 @@ def Adivinar(num_aleatorio):
     while (intento <= 5):    
         num_ingresado = int(input('Ingresa tu número: '))
         if num_ingresado == num_aleatorio:
-            return('Ganaste! y necesitaste {} intentos!!!'.format(intento))
+            return(f'Ganaste! y necesitaste {intento} intentos!!!')
         else:
             print('Mmmm ... No.. ese número no es... Seguí intentando.')
             intento += 1
-    return('\n Perdiste :(\n El número era: {}'.format(num_aleatorio))
+    return(f'\n Perdiste :(\n El número era: {num_aleatorio}')
 
 #Main
 print(Adivinar(numero_aleatorio))
