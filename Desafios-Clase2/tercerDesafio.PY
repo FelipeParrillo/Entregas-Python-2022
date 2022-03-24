@@ -2,9 +2,6 @@
 saber:
 • cuál es el promedio de las notas;
 • cuántos estudiantes están por debajo del promedio"""
-from re import X
-from tkinter.tix import INTEGER
-
 
 notas=[]
 total=0
