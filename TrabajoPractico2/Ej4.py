@@ -30,11 +30,13 @@ resumen = listado[1]
 
 def evaluarTitulo(titulo):
     titulo = titulo.split()
-    titulo.remove(titulo[0])
+    
+    
     if len(titulo) <= 10:
         print('Titulo ok')
     else:
         print('Titulo not ok')
+
 
 
 def evaluarResumen(resumen):

@@ -11,12 +11,12 @@ escribir alguna pequeña base de datos personalizada, o una aplicación
 especializada con interfaz gráfica, o UN juego simple.
 """
 
-frase = frase.lower().replace(',', '').replace('.', '').split('c')
-print(frase)
+frase = frase.lower().replace(',', '').replace('.', '').split()
+
 filtrado = []
 for n in range(len(frase)):      # agarra la frase y mientras las palabras no esten en la nueva lista filtrado, las va agregando, asi queda una lista sin repetir palabras
     if frase[n] not in filtrado:
         filtrado.append(frase[n])
 
 
-#print(filtrado)
+print(filtrado)
