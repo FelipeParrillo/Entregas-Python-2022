@@ -1,3 +1,10 @@
+"""Manipule estos archivos para realizar lo siguiente:
+• Generar una estructura con los nombres de los estudiantes y la suma de ambas notas.
+• Calcular el promedio de las notas totales e informar que alumnos obtuvieron menos que el
+promedio.
+"""
+
+
 def crearEstructura():
     '''Retorna una lista con tuplas que tienen el nombre del alumno + la suma de sus dos notas'''
     with open("Python-Actividades\\Entregas-Python-2022\\TrabajoPractico2\\nombres_1.txt", encoding="utf8") as archivo_nombres:
@@ -13,13 +20,15 @@ def crearEstructura():
 
     # listaAlum Append en tuplas con el Nombre, Merge de las dos notas
     listaAlum = []
-    pos = 0
-    for n in nombres:
+    for n in range(len(nombres)):
         nota = 0
-        nota = nota + int(eva1[pos])
-        nota = nota + int(eva2[pos])
-        listaAlum.append((n, nota))
-        pos += 1
+        nota += int(eva1[n])
+        nota += int(eva2[n])
+        listaAlum.append((nombres[n], nota))
+
+    archivo_nombres.close()
+    archivo_evaluacion1.close()
+    archivo_evaluacion2.close()
     return listaAlum
 
 
@@ -45,7 +54,5 @@ def informar(listaA, prom):
 
 
 listaA = crearEstructura()
-prom = promedio(listaA)
-listaB = informar(listaA, prom)
 print(
-    f'El promedio de las notas es: {prom}\n y los alumnos que quedaron por debajo del promedio son: {listaB}')
+    f'El promedio de las notas es: {("{0:.2f}".format(promedio(listaA)))}\nLos alumnos que quedaron por debajo del promedio son: {informar(listaA,promedio(listaA))}')
