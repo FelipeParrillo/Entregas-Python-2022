@@ -9,25 +9,25 @@ archivo = open(ruta_archivo, "r", encoding='utf8')
     
 csvreader = csv.reader(archivo, delimiter=',')
 
-#leyendo el encabezado
+#leyendo el encabezado para que no moleste en el filtrado de datos 
 encabezado = next(csvreader)
 
+# Functions #
 
-list_pelis_2021=[]
-list_pais_productor = []
-
-# recorriendo el csv
-for linea in csvreader:
-    # Agregando a una lista las peliculas agregadas a netflix en 2021
-    if '2021' in linea[6] and linea[1] == 'Movie':
-        list_pelis_2021.append(linea[2]) 
+def Filtrar():
+    list_pelis_2021=[]
+    list_pais_productor = []
+    for linea in csvreader:
+        # Agregando a una lista las peliculas agregadas a netflix en 2021
+        if '2021' in linea[6] and linea[1] == 'Movie':
+            list_pelis_2021.append(linea[2]) 
     
-    # Agregando a una lista el pais de producción de una temporada/pelicula
-    if linea[5] != '':
-        list_pais_productor.append(linea[5])
+        # Agregando a una lista el pais de producción de una temporada/pelicula
+        if linea[5] != '':
+            list_pais_productor.append(linea[5])
+    
+    return list_pelis_2021,list_pais_productor
 
-# con la funcion Counter saco el top 5 paises productores de peliculas/temporadas de series
-c = Counter(list_pais_productor)
 
 def imprimir(list_2021,c):
     #print tabla con top 5 productores
@@ -49,5 +49,7 @@ def imprimir(list_2021,c):
     print('*'*63)
 
 # __Main__ #
-imprimir(list_pelis_2021,c)
+list_pelis,list_prod = Filtrar()
+c = Counter(list_prod)
+imprimir(list_pelis,c)
 archivo.close()
