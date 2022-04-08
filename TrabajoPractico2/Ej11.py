@@ -15,9 +15,9 @@ def Imprimir(archN1, archP1, archP2):
 
     
 
-    print(' | Nombre | Nota1 | Nota2 | Total')
+    print('    | Nombre     | Nota1      | Nota2      | Total   ')
     for n in range(len(nombres)):
-        print(f'{n} | {nombres[n]} | {p1[n]} | {p2[n]} | {(int(p1[n]) + int(p2[n]))}')
+        print(f'{n:3} | {nombres[n]:10} | {p1[n]:10} | {p2[n]:10} | {(int(p1[n]) + int(p2[n])):<3}')
 
 
 
