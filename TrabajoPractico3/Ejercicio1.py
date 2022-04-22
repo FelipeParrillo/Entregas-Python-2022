@@ -45,7 +45,7 @@ def find_show_type(pais,datos):
     paises = find_country()
 
     if pais in paises:                
-        generos_del_pais = list(filter(bool,set(map(lambda linea: linea[10] if pais in linea[5] else False, datos)))) # Filtro los bool xq en filtrar lo primero q hago un split 
+        generos_del_pais = list(filter(bool,set(map(lambda linea: linea[10] if pais in linea[5] else False, datos)))) # Quito los False de relleno porque el split no los soporta 
         return filtrar(generos_del_pais)
     else:
         return False
