@@ -31,7 +31,7 @@ def filtrar(lista):
     '''Recibe una lista, la limpia, saca vacios y saca espacios al principio/final'''
     lista = list(map(lambda x: x.split(','), lista))
     aux = []
-    for listado in lista:
+    for listado in lista:        # esta doble iteracion fue la unica que se me re complico para pasarla a map con lambda y listarla de esa forma
         for l in listado:
             aux.append(l.strip())
     return list(filter(bool, set(aux)))
