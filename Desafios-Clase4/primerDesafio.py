@@ -1,9 +1,9 @@
 from collections import Counter
 import csv
-import os 
 
-ruta = os.path.dirname(os.path.realpath("."))
-ruta_archivo = os.path.join('C:\\Users\\felay\\OneDrive\\Documentos\\Lenguajes-VsCode\\Python-Actividades\\Entregas-Python-2022\\Desafios-Clase4\\netflix_titles.csv')
+
+
+ruta_archivo = 'C:\\Users\\felay\\OneDrive\\Documentos\\Lenguajes-VsCode\\Python-Actividades\\Entregas-Python-2022\\Desafios-Clase4\\netflix_titles.csv'
 ruta_archivo
 archivo = open(ruta_archivo, "r", encoding='utf8') 
     
@@ -49,7 +49,8 @@ def imprimir(list_2021,c):
     print('*'*63)
 
 # __Main__ #
-list_pelis,list_prod = Filtrar()
+
+list_pelis  ,list_prod = Filtrar()
 c = Counter(list_prod)
 imprimir(list_pelis,c)
 archivo.close()
