@@ -76,8 +76,8 @@ def search_by_year(año,datos):
     
 # Main #
 def main():
-    datos = read_file('netflix_titles.csv')  # DATOS es mi unica variable global, ya que contiene la informacion del vcs reader que practicamente voy a tener q usar en todos los modulos
-    print(find_country(datos))
+    datos = read_file('netflix_titles.csv')  # DATOS es una variable que uso practicamente en todas las funciones, ya que estoy consultando el data_set,
+    print(find_country(datos))               # me pregunto si tiene que ser pasada como parametro o usar un var global, o como implementar su uso. 
     print(find_show_type('Argentina',datos))
     print(search_by_country_show('India', 'Kota Factory', datos))
     print(alpha_order())
